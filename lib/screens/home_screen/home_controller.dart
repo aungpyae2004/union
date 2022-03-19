@@ -14,12 +14,12 @@ class HomeController extends GetxController {
   }
 
   void fetchProducts() async {
-    _updateIsLoading(true);
+    _dataIsLoading(true);
     product = await _apiService.fetchProducts();
-    _updateIsLoading(false);
+    _dataIsLoading(false);
   }
 
-  void _updateIsLoading(bool currentStatus) {
+  void _dataIsLoading(bool currentStatus) {
     isLoading = currentStatus;
     update();
   }
